@@ -1,8 +1,25 @@
 h1, #instructionsbox, #goalnumlocation, #tallybox, #currentscorebox{
     border: red dotted;
+    background-color: rgb(107, 174, 255, 0.5); 
 }
 
 #image1location, #image2location, #image3location, #image4location {
     border: green dotted;
     height: 20px;
 }
+
+body {
+    background-image: url("../images/light-grey-terrazzo.png");
+}
+
+
+/* Purple/blue/grey
+rgb 107 174 255
+greyblue
+rgb 69 199 232
+aquagreen
+rgb 91 255 229
+mintgreen
+rgb 71 232 147
+lime/green/grey
+rgb 136 255 148 */

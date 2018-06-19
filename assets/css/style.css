@@ -2,3 +2,7 @@ h1, #instructionsbox, #goalnumlocation, #tallybox, #currentscorebox{
     border: red dotted;
 }
 
+#image1location, #image2location, #image3location, #image4location {
+    border: green dotted;
+    height: 20px;
+}

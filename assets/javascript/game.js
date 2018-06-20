@@ -27,12 +27,15 @@ $(document).ready(function() {
       winscount ++;
       $("#winslocation").html("Wins: <h4>" + winscount + "</h4>");
       resetgame();
+      $("#winorloselocation").html("<h5>" + "You win!" + "</h5>");
     }
     else if (currentscore > randomgoalnumber) {
       console.log("you lose");
       lossescount ++;
       $("#losseslocation").html("Losses: <h4>" + lossescount + "</h4>");
       resetgame();
+      $("#winorloselocation").html("<h5>" + "You lost :(" + "</h5>");
+
     }   
   }
 
@@ -50,7 +53,7 @@ $(document).ready(function() {
     gem4value = Math.floor((Math.random() *11) + 1);
     console.log(gem4value);
   }
-
+  
   $("#gem1").on("click", function () {
         currentscore += gem1value;
         console.log("current score" + currentscore);

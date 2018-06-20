@@ -21,13 +21,41 @@ $(document).ready(function() {
   var gem4value = Math.floor((Math.random() *11) + 1);
   console.log(gem4value);
 
-  $(".gem").on("click", function () {
-    currentscore ++;
-    console.log("current score" + currentscore);
-    $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>")
+  function winorlose() {
+    if (currentscore === randomgoalnumber) {
+      console.log("you win");
+    }
+    else if (currentscore > randomgoalnumber) {
+      console.log("you lose");
+    }   
+  }
+
+  $("#gem1").on("click", function () {
+        currentscore += gem1value;
+        console.log("current score" + currentscore);
+        $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>");
+        winorlose();
   });
 
+  $("#gem2").on("click", function () {
+    currentscore += gem2value;
+    console.log("current score" + currentscore);
+    $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>");
+    winorlose();
+  });
 
+  $("#gem3").on("click", function () {
+    currentscore += gem3value;
+    console.log("current score" + currentscore);
+    $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>");
+    winorlose();
+  });
 
-    
+  $("#gem4").on("click", function () {
+    currentscore += gem4value;
+    console.log("current score" + currentscore);
+    $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>");
+    winorlose();
+  });
+  
 });

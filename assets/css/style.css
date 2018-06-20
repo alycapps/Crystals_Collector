@@ -1,11 +1,11 @@
 h1, #instructionsbox, #goalnumlocation, #tallybox, #currentscorebox{
     border: red dotted;
-    background-color: rgb(107, 174, 255, 0.5); 
+    background-color: lightgrey; 
 }
 
 #image1location, #image2location, #image3location, #image4location {
-    border: green dotted;
-    height: 20px;
+    /* border: green dotted;
+    height: 20px; */
 }
 
 body {

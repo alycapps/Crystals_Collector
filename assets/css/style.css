@@ -1,25 +1,29 @@
-h1, #instructionsbox, #goalnumlocation, #tallybox, #currentscorebox{
-    border: red dotted;
-    background-color: lightgrey; 
+h1 {
+    background: linear-gradient(to right, yellow, green, blue, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+    line-height: 60px;
+    padding: 10px;
 }
 
-#image1location, #image2location, #image3location, #image4location {
-    /* border: green dotted;
-    height: 20px; */
+h2 {
+    background: linear-gradient(to right, red, blue, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+    line-height: 60px;
+    padding: 10px;
+}
+
+h4 {
+    color: rgb(11, 159, 102);
+}
+
+p {
+    color: grey;
 }
 
 body {
     background-image: url("../images/light-grey-terrazzo.png");
 }
-
-
-/* Purple/blue/grey
-rgb 107 174 255
-greyblue
-rgb 69 199 232
-aquagreen
-rgb 91 255 229
-mintgreen
-rgb 71 232 147
-lime/green/grey
-rgb 136 255 148 */

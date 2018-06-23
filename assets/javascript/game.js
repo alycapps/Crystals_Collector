@@ -39,10 +39,9 @@ $(document).ready(function() {
     $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>")
     randomgoalnumber = Math.floor((Math.random() *100) + 20);
     $("#goalnumlocation").html("Your goals is to match: <h2>" + randomgoalnumber + "</h2>")
-    gem1value = Math.floor((Math.random() *11) + 1);
-    gem2value = Math.floor((Math.random() *11) + 1);
-    gem3value = Math.floor((Math.random() *11) + 1);
-    gem4value = Math.floor((Math.random() *11) + 1);
+    for (i=1; i<5; i++) {
+      gemvalue("#gem" + i);
+    }
   }
 
 $(".gem img").on("click", function () {

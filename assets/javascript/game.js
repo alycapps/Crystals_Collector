@@ -9,13 +9,20 @@ $(document).ready(function() {
   var randomgoalnumber = Math.floor((Math.random() *100) + 20);
     $("#goalnumlocation").html("Your goals is to match: <h2>" + randomgoalnumber + "</h2>")
 
-  var gem1value = Math.floor((Math.random() *11) + 1);
+  // var gem1value = Math.floor((Math.random() *11) + 1);
 
-  var gem2value = Math.floor((Math.random() *11) + 1);
+  function gemvalue(id) {
+    $(id).data("value", Math.floor((Math.random() *11) + 1));
+  }
 
-  var gem3value = Math.floor((Math.random() *11) + 1);
+  for (i=1; i<5; i++) {
+    gemvalue("#gem" + i);
+  }
+  // var gem2value = Math.floor((Math.random() *11) + 1);
 
-  var gem4value = Math.floor((Math.random() *11) + 1);
+  // var gem3value = Math.floor((Math.random() *11) + 1);
+
+  // var gem4value = Math.floor((Math.random() *11) + 1);
 
   function winorlose() {
     if (currentscore === randomgoalnumber) {
@@ -44,26 +51,33 @@ $(document).ready(function() {
     gem4value = Math.floor((Math.random() *11) + 1);
   }
   
-function gemclick(gem) {
-  currentscore += gem;
-  $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>");
-  winorlose();
-}
+// function gemclick(gem) {
+//   currentscore += gem;
+//   $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>");
+//   winorlose();
+// }
 
-  $("#gem1").on("click", function () {
-    gemclick(gem1value);
+$(".gem img").on("click", function () {
+    currentscore += $(this).data("value");
+    $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>");
+    winorlose();
   });
 
-  $("#gem2").on("click", function () {
-    gemclick(gem2value);
-  });
 
-  $("#gem3").on("click", function () {
-    gemclick(gem3value);
-  });
+  // $("#gem1").on("click", function () {
+  //   gemclick(gem1value);
+  // });
 
-  $("#gem4").on("click", function () {
-    gemclick(gem4value);
-  });
-  
+  // $("#gem2").on("click", function () {
+  //   gemclick(gem2value);
+  // });
+
+  // $("#gem3").on("click", function () {
+  //   gemclick(gem3value);
+  // });
+
+  // $("#gem4").on("click", function () {
+  //   gemclick(gem4value);
+  // });
+
 });

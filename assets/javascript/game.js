@@ -9,7 +9,7 @@ $(document).ready(function() {
   var randomgoalnumber = Math.floor((Math.random() *100) + 20);
     $("#goalnumlocation").html("Your goals is to match: <h2>" + randomgoalnumber + "</h2>")
 
-
+// assigning random value to each gem
   function gemvalue(id) {
     $(id).data("value", Math.floor((Math.random() *11) + 1));
   }
@@ -18,6 +18,7 @@ $(document).ready(function() {
     gemvalue("#gem" + i);
   }
 
+  // determine if score wins orloses
   function winorlose() {
     if (currentscore === randomgoalnumber) {
       winscount ++;
@@ -34,6 +35,7 @@ $(document).ready(function() {
     }   
   }
 
+  // reset values after a win or loss
   function resetgame() {
     currentscore = 0;
     $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>")
@@ -44,6 +46,7 @@ $(document).ready(function() {
     }
   }
 
+  //make gem images clickable and add to score
 $(".gem img").on("click", function () {
     currentscore += $(this).data("value");
     $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>");

@@ -8,12 +8,15 @@ $(document).ready(function() {
     $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>")
   var randomgoalnumber = Math.floor((Math.random() *100) + 20);
     $("#goalnumlocation").html("Your goals is to match: <h2>" + randomgoalnumber + "</h2>")
+  gemvalue();
 
   // assigning random value to each gem
-  for (i=1; i<5; i++) {
-    var id="#gem" + i;
-    $(id).data("value", Math.floor((Math.random() *11) + 1));
-  }
+  function gemvalue(id) {
+    for (i=1; i<5; i++) {
+      var id="#gem" + i;
+      $(id).data("value", Math.floor((Math.random() *11) + 1));
+    }
+  }; 
 
   // determine if score wins orloses
   function winorlose() {
@@ -38,9 +41,7 @@ $(document).ready(function() {
     $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>")
     randomgoalnumber = Math.floor((Math.random() *100) + 20);
     $("#goalnumlocation").html("Your goals is to match: <h2>" + randomgoalnumber + "</h2>")
-    for (i=1; i<5; i++) {
-      gemvalue("#gem" + i);
-    }
+    gemvalue();
   }
 
   //make gem images clickable and add to score

@@ -33,7 +33,7 @@ $(document).ready(function() {
       $("#winorloselocation").html("<h5>" + "You lost :(" + "</h5>");
 
     }   
-  }
+  };
 
   // reset values after a win or loss
   function resetgame() {
@@ -42,10 +42,10 @@ $(document).ready(function() {
     randomgoalnumber = Math.floor((Math.random() *100) + 20);
     $("#goalnumlocation").html("Your goals is to match: <h2>" + randomgoalnumber + "</h2>")
     gemvalue();
-  }
+  };
 
   //make gem images clickable and add to score
-$(".gem img").on("click", function () {
+  $(".gem img").on("click", function () {
     currentscore += $(this).data("value");
     $("#currentscorebox").html("Your total score is: <h2>" + currentscore + "</h2>");
     winorlose();

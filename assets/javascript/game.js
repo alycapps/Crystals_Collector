@@ -9,13 +9,10 @@ $(document).ready(function() {
   var randomgoalnumber = Math.floor((Math.random() *100) + 20);
     $("#goalnumlocation").html("Your goals is to match: <h2>" + randomgoalnumber + "</h2>")
 
-// assigning random value to each gem
-  function gemvalue(id) {
-    $(id).data("value", Math.floor((Math.random() *11) + 1));
-  }
-
+  // assigning random value to each gem
   for (i=1; i<5; i++) {
-    gemvalue("#gem" + i);
+    var id="#gem" + i;
+    $(id).data("value", Math.floor((Math.random() *11) + 1));
   }
 
   // determine if score wins orloses
